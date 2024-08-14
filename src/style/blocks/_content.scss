@@ -1,0 +1,33 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: var(--container-width);
+  margin-inline: auto;
+
+  @include tablet {
+    gap: 32px;
+  }
+
+  @include desktop {
+    gap: 50px;
+  }
+
+  &__section {
+    &--margin-top {
+      @include tablet {
+        margin-top: -8px;
+      }
+
+      @include desktop {
+        margin-top: -12px;
+      }
+    }
+
+    &--margin-top-lg {
+      @include desktop {
+        margin-top: -42px;
+      }
+    }
+  }
+}

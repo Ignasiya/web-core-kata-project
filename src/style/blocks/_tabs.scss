@@ -1,0 +1,30 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  @include tablet {
+    row-gap: 32px;
+  }
+
+  @include desktop {
+    row-gap: 16px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3px 10px;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include desktop {
+      flex-wrap: wrap;
+      overflow: auto;
+    }
+  }
+}

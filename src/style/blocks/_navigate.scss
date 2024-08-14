@@ -1,0 +1,43 @@
+.navigate {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include desktop {
+      row-gap: 24px;
+    }
+  }
+
+  &__link {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-inline: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 32px;
+      width: 4px;
+      background-color: transparent;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      left: 0;
+      transition: background-color var(--transition-duration) ease;
+    }
+
+    @include hover {
+      color: var(--color-darkgray);
+      cursor: pointer;
+
+      &::before {
+        background-color: var(--color-turquoise);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.page-menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  @include desktop-exclude {
+    &--isborder:before {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: var(--color-border);
+      margin-inline: 4px;
+    }
+  }
+
+  &__logo {
+    margin-block: -5px;
+  }
+
+  &--margin-left {
+    margin-left: auto;
+  }
+
+  @include tablet {
+    &--isborder-tablet:after {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: var(--color-border);
+      margin-inline: 4px;
+    }
+  }
+
+  &--absolute {
+    @include desktop {
+      position: absolute;
+      gap: 32px;
+      top: 40px;
+      right: 32px;
+    }
+  }
+}

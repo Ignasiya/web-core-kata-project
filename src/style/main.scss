@@ -1,0 +1,7 @@
+@import '~normalize.css', 'normalize', 'fonts', 'mixins', 'media', 'variables', 'utils', 'globals';
+
+@import 'blocks/sidebar', 'blocks/navigate', 'blocks/shading-background', 'blocks/content',
+  'blocks/header', 'blocks/page-menu', 'blocks/page-header', 'blocks/page-navigate',
+  'blocks/circle-button', 'blocks/button', 'blocks/tabs', 'blocks/article', 'blocks/show-toggle',
+  'blocks/tab-button', 'blocks/title', 'blocks/section', 'blocks/label-button', 'blocks/languages',
+  'blocks/contacts', 'blocks/swiper';

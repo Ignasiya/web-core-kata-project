@@ -1,0 +1,32 @@
+:root {
+  --color-black: #1b1c21;
+  --color-white: #ffffff;
+  --color-turquoise: #41f6d7;
+  --color-ligthturquoise: #b8ffec;
+  --color-ligthturquoise-alt: #d9fff5;
+  --color-pink: #ff3e79;
+  --color-gray: #f8f8f8;
+  --color-darkgray: #7e7e82;
+  --color-border: #eaeaea;
+  --color-dot: #dddddd;
+  --color-dot-active: #b5b6bc;
+
+  --border-radius: 6px;
+  --border-radius-large: 16px;
+
+  --container-width: 1120px;
+
+  --background-linear: linear-gradient(
+    90deg,
+    rgb(248, 248, 248),
+    rgb(255, 255, 255) 98%
+  );
+
+  --font-family-base: "TT Lakes", sans-serif;
+
+  --input-height: 48px;
+  --button-height: 32px;
+  --circle-button-height: 40px;
+
+  --transition-duration: 0.2s;
+}

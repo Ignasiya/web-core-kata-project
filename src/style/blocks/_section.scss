@@ -1,0 +1,9 @@
+.section {
+  &__page-navigate {
+    padding-block: 16px;
+
+    @include tablet {
+      padding-block: 24px;
+    }
+  }
+}

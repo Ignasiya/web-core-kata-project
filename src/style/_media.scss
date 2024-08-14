@@ -1,0 +1,42 @@
+$desktop: 1024px;
+$tablet: 1023px;
+$tablet-above: 768px;
+$mobile: 767px;
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-exclude {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-above) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.article {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    gap: 48px;
+  }
+
+  @include desktop {
+    gap: 36px;
+  }
+
+  &__body {
+    flex: 1 0 46%;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+
+    @include mobile {
+      height: 106px;
+    }
+
+    @include tablet {
+      height: 160px;
+    }
+  }
+
+  &__text {
+    letter-spacing: 0.2px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__show-toggle {
+    margin-top: 16px;
+
+    @include tablet {
+      margin-top: 10px;
+    }
+
+    @include desktop {
+      margin-top: 13px;
+    }
+  }
+
+  &__image {
+    flex: 1 0 46%;
+    object-fit: cover;
+    min-width: 320px;
+    border-radius: var(--border-radius);
+
+    @include mobile {
+      margin-inline: -16px;
+      width: calc(100% + 32px);
+      max-width: none;
+      border-radius: 0;
+    }
+  }
+}

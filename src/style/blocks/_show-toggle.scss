@@ -1,0 +1,51 @@
+.show-toggle {
+  @include reset-link;
+
+  display: inline-flex;
+  column-gap: 8px;
+  position: relative;
+
+  @include hover {
+    cursor: pointer;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition-duration: 0.2s;
+  }
+
+  &__arrow {
+    @include square(24px);
+    @include flex-centered;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &--active {
+    .show-toggle__arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &--icon-arrow {
+    background-image: url('@assets/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}

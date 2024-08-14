@@ -1,0 +1,42 @@
+.container {
+  padding-inline: 16px;
+
+  @include tablet {
+    padding-inline: 24px;
+  }
+
+  @include desktop {
+    padding-inline: 32px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}

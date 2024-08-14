@@ -1,0 +1,59 @@
+.page-navigate {
+  height: 132px;
+
+  &--heigh-lg {
+    height: 220px;
+  }
+
+  @include tablet {
+    height: auto;
+  }
+
+  &__list {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+      align-items: center;
+      column-gap: 24px;
+      row-gap: 16px;
+      height: 168px;
+      overflow-y: hidden;
+      padding-bottom: 8px;
+      transition: height 0.5s ease;
+    }
+
+    @include desktop {
+      column-gap: 32px;
+    }
+
+    &--show-all {
+      height: auto;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    min-height: 72px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    background-image: url('@assets/icons/ic_go.svg');
+    background-repeat: no-repeat;
+    background-position: right 16px bottom 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease;
+
+    @include hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__show-toggle {
+    margin-top: 16px;
+  }
+}

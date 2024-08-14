@@ -1,0 +1,61 @@
+.circle-button {
+  @include flex-centered;
+  @include square(var(--circle-button-height));
+
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  border: 1px solid transparent;
+
+  @include hover {
+    border: 2px solid var(--color-ligthturquoise);
+    cursor: pointer;
+  }
+
+  &--icon-burger {
+    background-image: url('@assets/icons/burger.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-phone {
+    background-image: url('@assets/icons/phone.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-messege {
+    background-image: url('@assets/icons/messege.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-group {
+    background-image: url('@assets/icons/group.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-wrench {
+    background-image: url('@assets/icons/wrench.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-glass {
+    background-image: url('@assets/icons/glass.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-glass-alt {
+    background-image: url('@assets/icons/glass-alt.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--icon-cross {
+    background-image: url('@assets/icons/cross.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

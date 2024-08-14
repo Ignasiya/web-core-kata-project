@@ -1,0 +1,30 @@
+.label-button {
+  @include reset-btn;
+
+  padding: 0;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  z-index: 1;
+
+  &__text {
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  @include hover {
+    cursor: pointer;
+    color: var(--color-darkgray);
+
+    .label-button--hover {
+      border: 2px solid var(--color-ligthturquoise);
+    }
+  }
+}

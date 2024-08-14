@@ -1,0 +1,17 @@
+.title {
+  line-height: 40px;
+  padding-left: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 4px;
+    background-color: var(--color-turquoise);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    left: 0;
+  }
+}
