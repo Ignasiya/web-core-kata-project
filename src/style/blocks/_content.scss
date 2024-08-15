@@ -1,16 +1,22 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: var(--container-width);
-  margin-inline: auto;
-
-  @include tablet {
-    gap: 32px;
+  @include desktop {
+    margin-left: 320px;
   }
 
-  @include desktop {
-    gap: 50px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: var(--container-width);
+    margin-inline: auto;
+
+    @include tablet {
+      gap: 32px;
+    }
+
+    @include desktop {
+      gap: 50px;
+    }
   }
 
   &__section {

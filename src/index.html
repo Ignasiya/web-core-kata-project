@@ -12,165 +12,261 @@
     <title>CPS Услуги и севрисы</title>
   </head>
   <body>
-    <main class="content">
-      <header class="header container">
-        <div class="header__menu hidden-desktop">
-          <div class="page-menu">
-            <div class="page-menu page-menu--isborder-tablet">
-              <button type="button" class="circle-button circle-button--icon-burger">
-                <span class="visually-hidden">Меню</span>
-              </button>
-            </div>
-            <a class="page-menu__logo logo" href="index.html">
-              <img
-                src="images/logo.svg"
-                alt="CPS - компания по ремонту техники Dell"
-                width="96"
-                height="50"
-                loading="lazy"
-              />
-            </a>
-          </div>
-          <ul class="page-menu page-menu--margin-left hidden-mobile">
-            <li class="page-menu__item">
-              <button type="button" class="circle-button circle-button--icon-phone">
-                <span class="visually-hidden">Позвоните нам</span>
-              </button>
+    <aside class="sidebar" id="sidebarOverlay">
+      <header class="sidebar__header container">
+        <button class="hidden-desktop circle-button circle-button--icon-cross" id="closeSidebar">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+        <a class="sidebar__logo logo" href="https://ignasiya.github.io/first_part_project/">
+          <img
+            src="images/logo.svg"
+            alt="CPS - компания по ремонту техники Dell"
+            width="96"
+            height="50"
+            loading="lazy"
+          />
+        </a>
+        <button
+          class="sidebar__button sidebar__button--margin-left circle-button circle-button--icon-glass-alt"
+        >
+          <span class="visually-hidden">Поиск</span>
+        </button>
+      </header>
+      <nav class="navigate">
+        <ul class="navigate__list">
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Ремонт техники</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Услуги и сервисы</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Продавцам техники</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Партнерам</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Производителям</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Наши сервисные центры</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <footer class="sidebar__footer container">
+        <ul class="menu">
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-phone">
+              <span class="visually-hidden">Позвоните нам</span>
+            </button>
+          </li>
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-messege">
+              <span class="visually-hidden">Напишите нам</span>
+            </button>
+          </li>
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-group">
+              <span class="visually-hidden">Контакты</span>
+            </button>
+          </li>
+        </ul>
+        <address class="sidebar__contacts contacts">
+          <a class="contacts__mail" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="contacts__phone" href="tel:+78008908900">8 800 890 8900</a>
+        </address>
+        <div class="languages">
+          <ul class="languages__list">
+            <li class="languages__item">
+              <div class="languages__btn" id="languageRu">RU</div>
             </li>
-            <li class="page-menu__item">
-              <button type="button" class="circle-button circle-button--icon-messege">
-                <span class="visually-hidden">Напишите нам</span>
-              </button>
+            <li class="language__item">
+              <div class="languages__btn" id="languageEn">EN</div>
             </li>
-            <li class="page-menu__item">
-              <button type="button" class="circle-button circle-button--icon-group">
-                <span class="visually-hidden">Контакты</span>
-              </button>
+            <li class="language__item">
+              <div class="languages__btn" id="languageCh">CH</div>
             </li>
           </ul>
         </div>
-        <div class="page-menu page-menu--isborder page-menu--absolute">
-          <button type="button" class="label-button">
-            <span class="label-button__text">Оставить заявку</span>
-            <span class="circle-button circle-button--icon-wrench label-button--hover"></span>
-          </button>
-          <button type="button" class="label-button">
-            <span class="label-button__text">Статус ремонта</span>
-            <span class="circle-button circle-button--icon-glass label-button--hover"></span>
-          </button>
-        </div>
-      </header>
+      </footer>
+    </aside>
 
-      <section class="section content__section--margin-top">
-        <div class="section__header">
-          <h1 class="title">Услуги и сервисы</h1>
-        </div>
-      </section>
+    <div id="shadingBackground" class="shading-background"></div>
 
-      <section class="section content__section--margin-top-lg">
-        <div class="section__body container">
-          <nav class="tabs">
-            <ul role="tabslist" class="tabs__list">
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="true"
-                  aria-controls="tab1-content"
-                  id="tab1"
-                  class="tab__button"
+    <main class="content">
+      <div class="content__wrapper">
+        <header class="header container">
+          <div class="header__menu hidden-desktop">
+            <div class="menu">
+              <div class="menu menu--isborder-tablet">
+                <button
+                  type="button"
+                  class="circle-button circle-button--icon-burger"
+                  id="openSidebar"
                 >
-                  Ремонтируемые бренды
-                </a>
-              </li>
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="tab2-content"
-                  id="tab2"
-                  class="tab__button"
-                >
-                  Дополнительные услуги
-                </a>
-              </li>
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="tab3-content"
-                  id="tab3"
-                  class="tab__button"
-                >
-                  Цены на услуги
-                </a>
-              </li>
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="tab4-content"
-                  id="tab4"
-                  class="tab__button"
-                >
-                  Адреса сервисных центров
-                </a>
-              </li>
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="tab5-content"
-                  id="tab5"
-                  class="tab__button"
-                >
-                  Специальные цены
-                </a>
-              </li>
-              <li role="presentation" class="tabs__item">
-                <a
-                  role="tab"
-                  aria-selected="false"
-                  aria-controls="tab6-content"
-                  id="tab6"
-                  class="tab__button"
-                >
-                  Отзывы
-                </a>
-              </li>
-            </ul>
-
-            <div role="tabpanel" id="tab1-content" aria-labelledby="tab1">
-              <article class="article">
-                <div class="article__body">
-                  <div class="article__wrapper">
-                    <p class="article__text">
-                      Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
-                      нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
-                      производителя.
-                    </p>
-                    <p class="article__text">
-                      Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что
-                      подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к
-                      нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и
-                      близким.
-                    </p>
-                  </div>
-                  <a href="#" class="article__show-toggle show-toggle">
-                    <span class="show-toggle__arrow show-toggle--icon-arrow"></span>
-                    <span class="show-toggle__text">Читать далее</span>
-                  </a>
-                </div>
+                  <span class="visually-hidden">Меню</span>
+                </button>
+              </div>
+              <a class="menu__logo logo" href="https://ignasiya.github.io/first_part_project/">
                 <img
-                  class="article__image"
-                  src="images/cps.png"
-                  alt="Фото вывески"
+                  src="images/logo.svg"
+                  alt="CPS - компания по ремонту техники Dell"
+                  width="96"
+                  height="50"
                   loading="lazy"
                 />
-              </article>
+              </a>
             </div>
-          </nav>
-        </div>
-      </section>
+            <ul class="menu menu--margin-left hidden-mobile">
+              <li class="menu__item">
+                <button type="button" class="circle-button circle-button--icon-phone">
+                  <span class="visually-hidden">Позвоните нам</span>
+                </button>
+              </li>
+              <li class="menu__item">
+                <button type="button" class="circle-button circle-button--icon-messege">
+                  <span class="visually-hidden">Напишите нам</span>
+                </button>
+              </li>
+              <li class="menu__item">
+                <button type="button" class="circle-button circle-button--icon-group">
+                  <span class="visually-hidden">Контакты</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="menu menu--isborder menu--absolute">
+            <button type="button" class="label-button">
+              <span class="label-button__text">Оставить заявку</span>
+              <span class="circle-button circle-button--icon-wrench label-button--hover"></span>
+            </button>
+            <button type="button" class="label-button">
+              <span class="label-button__text">Статус ремонта</span>
+              <span class="circle-button circle-button--icon-glass label-button--hover"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="section content__section--margin-top">
+          <div class="section__header">
+            <h1 class="title">Услуги и сервисы</h1>
+          </div>
+        </section>
+
+        <section class="section content__section--margin-top-lg">
+          <div class="section__body container">
+            <nav class="tabs">
+              <ul role="tabslist" class="tabs__list">
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="tab1-content"
+                    id="tab1"
+                    class="tabs__button"
+                  >
+                    Ремонтируемые бренды
+                  </a>
+                </li>
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab2-content"
+                    id="tab2"
+                    class="tabs__button"
+                  >
+                    Дополнительные услуги
+                  </a>
+                </li>
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab3-content"
+                    id="tab3"
+                    class="tabs__button"
+                  >
+                    Цены на услуги
+                  </a>
+                </li>
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab4-content"
+                    id="tab4"
+                    class="tabs__button"
+                  >
+                    Адреса сервисных центров
+                  </a>
+                </li>
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab5-content"
+                    id="tab5"
+                    class="tabs__button"
+                  >
+                    Специальные цены
+                  </a>
+                </li>
+                <li role="presentation" class="tabs__item">
+                  <a
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab6-content"
+                    id="tab6"
+                    class="tabs__button"
+                  >
+                    Отзывы
+                  </a>
+                </li>
+              </ul>
+
+              <div role="tabpanel" id="tab1-content" aria-labelledby="tab1">
+                <article class="article">
+                  <div class="article__body">
+                    <div class="article__wrapper">
+                      <p class="article__text">
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только
+                        у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+                        производителя.
+                      </p>
+                      <p class="article__text">
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                        что подтверждает большое количество постоянных клиентов. Мы гордимся тем,
+                        что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным
+                        и близким.
+                      </p>
+                    </div>
+                    <a href="#" class="article__show-toggle show-toggle">
+                      <span class="show-toggle__arrow show-toggle--icon-arrow"></span>
+                      <span class="show-toggle__text">Читать далее</span>
+                    </a>
+                  </div>
+                  <img
+                    class="article__image"
+                    src="images/cps.png"
+                    alt="Фото вывески"
+                    loading="lazy"
+                  />
+                </article>
+              </div>
+            </nav>
+          </div>
+        </section>
+
+        <footer class="footer"></footer>
+      </div>
     </main>
   </body>
 </html>

@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   max-width: 2560px;
   font-family: var(--font-family-base);
@@ -21,10 +31,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
-}
-
 h1 {
   @include fluid-text(28, 24);
 }
@@ -35,5 +41,5 @@ h3 {
 }
 
 p {
-  @include fluid-text(16, 14);
+  @include fluid-text(18, 14);
 }

@@ -1,4 +1,4 @@
-.page-navigate {
+.navbar {
   height: 132px;
 
   &--heigh-lg {
@@ -16,10 +16,10 @@
       align-items: center;
       column-gap: 24px;
       row-gap: 16px;
-      height: 168px;
+      max-height: 168px;
       overflow-y: hidden;
       padding-bottom: 8px;
-      transition: height 0.5s ease;
+      transition: max-height 0.5s ease-out;
     }
 
     @include desktop {
@@ -27,7 +27,7 @@
     }
 
     &--show-all {
-      height: auto;
+      max-height: 336px;
     }
   }
 

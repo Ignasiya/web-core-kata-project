@@ -30,6 +30,9 @@
 
   &__header {
     padding-block: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
   }
 
   &__logo {
@@ -48,6 +51,12 @@
   &__languages {
     @include desktop {
       margin-top: 24px;
+    }
+  }
+
+  &__button {
+    &--margin-left {
+      margin-left: auto;
     }
   }
 }

@@ -1,5 +1,6 @@
 .container {
   padding-inline: 16px;
+  max-width: var(--container-width);
 
   @include tablet {
     padding-inline: 24px;
