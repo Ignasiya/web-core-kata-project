@@ -11,18 +11,14 @@
   --color-dot: #dddddd;
   --color-dot-active: #b5b6bc;
 
-  --border-radius: 6px;
+  --border-radius: 8px;
   --border-radius-large: 16px;
 
   --container-width: 1120px;
 
-  --background-linear: linear-gradient(
-    90deg,
-    rgb(248, 248, 248),
-    rgb(255, 255, 255) 98%
-  );
+  --background-linear: linear-gradient(90deg, rgb(248, 248, 248), rgb(255, 255, 255) 98%);
 
-  --font-family-base: "TT Lakes", sans-serif;
+  --font-family-base: 'TT Lakes', sans-serif;
 
   --input-height: 48px;
   --button-height: 32px;

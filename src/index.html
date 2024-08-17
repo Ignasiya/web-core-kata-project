@@ -63,12 +63,12 @@
       <footer class="sidebar__footer container">
         <ul class="menu">
           <li class="menu__item">
-            <button class="circle-button circle-button--icon-phone">
+            <button class="circle-button circle-button--icon-phone" id="openCall">
               <span class="visually-hidden">Позвоните нам</span>
             </button>
           </li>
           <li class="menu__item">
-            <button class="circle-button circle-button--icon-messege">
+            <button class="circle-button circle-button--icon-messege" id="openFeedback">
               <span class="visually-hidden">Напишите нам</span>
             </button>
           </li>
@@ -106,11 +106,7 @@
           <div class="header__menu hidden-desktop">
             <div class="menu">
               <div class="menu menu--isborder-tablet">
-                <button
-                  type="button"
-                  class="circle-button circle-button--icon-burger"
-                  id="openSidebar"
-                >
+                <button class="circle-button circle-button--icon-burger" id="openSidebar">
                   <span class="visually-hidden">Меню</span>
                 </button>
               </div>
@@ -126,28 +122,28 @@
             </div>
             <ul class="menu menu--margin-left hidden-mobile">
               <li class="menu__item">
-                <button type="button" class="circle-button circle-button--icon-phone">
+                <button class="circle-button circle-button--icon-phone" id="openCall">
                   <span class="visually-hidden">Позвоните нам</span>
                 </button>
               </li>
               <li class="menu__item">
-                <button type="button" class="circle-button circle-button--icon-messege">
+                <button class="circle-button circle-button--icon-messege" id="openFeedback">
                   <span class="visually-hidden">Напишите нам</span>
                 </button>
               </li>
               <li class="menu__item">
-                <button type="button" class="circle-button circle-button--icon-group">
+                <button class="circle-button circle-button--icon-group">
                   <span class="visually-hidden">Контакты</span>
                 </button>
               </li>
             </ul>
           </div>
           <div class="menu menu--isborder menu--absolute">
-            <button type="button" class="label-button">
+            <button class="label-button">
               <span class="label-button__text">Оставить заявку</span>
               <span class="circle-button circle-button--icon-wrench label-button--hover"></span>
             </button>
-            <button type="button" class="label-button">
+            <button class="label-button">
               <span class="label-button__text">Статус ремонта</span>
               <span class="circle-button circle-button--icon-glass label-button--hover"></span>
             </button>
@@ -265,8 +261,98 @@
           </div>
         </section>
 
-        <footer class="footer"></footer>
+        <footer class="footer footer--margin-top container">
+          <div class="footer__copyright">
+            <p>© 2019 CPS</p>
+            <p>Разработано командой Apesong</p>
+          </div>
+          <div class="footer__politic">Политика конфиденциальности</div>
+          <div class="footer__oferta">
+            Информация, размещенная на данной странице, не является публичной офертой
+          </div>
+        </footer>
       </div>
     </main>
+
+    <dialog class="modal" id="feedbackModal">
+      <button
+        class="modal__circle-button circle-button circle-button--icon-cross"
+        id="closeFeedback"
+      >
+        <span class="visually-hidden">Закрыть окно обратной связи</span>
+      </button>
+      <h1 class="title modal__title">Обратная связь</h1>
+      <div class="modal__body container">
+        <form class="modal__form" action="#" method="post" aria-label="Заказать звонок">
+          <input
+            class="modal__input input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Имя"
+            required
+          />
+          <input
+            class="modal__input input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Телефон"
+            required
+          />
+          <input
+            class="modal__input input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Электронная почта"
+            required
+          />
+          <textarea
+            class="modal__input input"
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Сообщение"
+            required
+          ></textarea>
+          <div class="modal__text">
+            Нажимая "отправить", вы даете согласие на
+            <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>.
+          </div>
+          <button class="pink-button modal__pink-button" type="submit">
+            <span class="pink-button__text">Отправить</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="callModal">
+      <button class="modal__circle-button circle-button circle-button--icon-cross" id="closeCall">
+        <span class="visually-hidden">Закрыть окно заказа звонка</span>
+      </button>
+      <h1 class="title modal__title">Заказать звонок</h1>
+      <div class="modal__body container">
+        <form class="modal__form" action="#" method="post" aria-label="Заказать звонок">
+          <input
+            class="modal__input input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Телефон"
+            required
+          />
+          <div class="modal__text">
+            Нажимая "отправить", вы даете согласие на
+            <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>.
+          </div>
+          <button class="pink-button modal__pink-button" type="submit">
+            <span class="pink-button__text">Отправить</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>

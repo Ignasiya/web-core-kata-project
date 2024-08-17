@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 25px;
+  gap: 16px;
+  color: var(--color-darkgray);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0.7;
+  border-top: 1px solid var(--color-ligthturquoise-alt);
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &--margin-top {
+    margin-top: auto;
+  }
+
+  &__copyright {
+    max-width: 240px;
+    flex: 1 0 30%;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__politic {
+    max-width: 220px;
+    flex: 1 0 30%;
+  }
+
+  &__oferta {
+    max-width: 330px;
+    flex: 1 0 30%;
+
+    @include tablet {
+      text-align: right;
+    }
+  }
+}

@@ -3,7 +3,17 @@ import './style/main.scss'
 const elBtnOpenSidebar = document.querySelector('#openSidebar')
 const elBtnCloseSidebar = document.querySelector('#closeSidebar')
 const elSidebar = document.querySelector('#sidebarOverlay')
+
+const elsBtnOpenFeedback = document.querySelectorAll('#openFeedback')
+const elBtnCloseFeedback = document.querySelector('#closeFeedback')
+const elFeedback = document.querySelector('#feedbackModal')
+
+const elsBtnOpenCall = document.querySelectorAll('#openCall')
+const elBtnCloseCall = document.querySelector('#closeCall')
+const elCall = document.querySelector('#callModal')
+
 const elShadingBackground = document.querySelector('#shadingBackground')
+
 const elsNavigateShowToggle = document.querySelectorAll('.navbar__show-toggle')
 
 elBtnOpenSidebar?.addEventListener('click', () => {
@@ -14,6 +24,36 @@ elBtnOpenSidebar?.addEventListener('click', () => {
 elBtnCloseSidebar?.addEventListener('click', () => {
   elSidebar.classList.toggle('sidebar--show')
   elShadingBackground.classList.toggle('shading-background--show')
+})
+
+elsBtnOpenFeedback.forEach(el => {
+  el.addEventListener('click', () => {
+    elFeedback.showModal()
+
+    if (elSidebar.classList.contains('sidebar--show')) {
+      elSidebar.classList.remove('sidebar--show')
+      elShadingBackground.classList.toggle('shading-background--show')
+    }
+  })
+})
+
+elBtnCloseFeedback.addEventListener('click', () => {
+  elFeedback.close()
+})
+
+elsBtnOpenCall.forEach(el => {
+  el.addEventListener('click', () => {
+    elCall.showModal()
+
+    if (elSidebar.classList.contains('sidebar--show')) {
+      elSidebar.classList.remove('sidebar--show')
+      elShadingBackground.classList.toggle('shading-background--show')
+    }
+  })
+})
+
+elBtnCloseCall.addEventListener('click', () => {
+  elCall.close()
 })
 
 elsNavigateShowToggle?.forEach(el => {
@@ -29,29 +69,3 @@ elsNavigateShowToggle?.forEach(el => {
     }
   })
 })
-
-let mySwiper
-
-function initSwiper() {
-  if (window.innerWidth < 768) {
-    if (!mySwiper) {
-      mySwiper = new Swiper('.mySwiper', {
-        spaceBetween: 24,
-        width: 272,
-        height: 280,
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true
-        }
-      })
-    }
-  } else {
-    if (mySwiper) {
-      mySwiper.destroy(true, true)
-      mySwiper = null
-    }
-  }
-}
-
-window.addEventListener('resize', initSwiper)
-initSwiper()

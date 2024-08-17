@@ -1,0 +1,28 @@
+.pink-button {
+  @include flex-centered;
+
+  height: 32px;
+  padding-left: 16px;
+  padding-right: 40px;
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-pink);
+  background-image: url('@assets/icons/dropdown.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  border: 1px solid transparent;
+
+  @include hover {
+    border: 1px solid var(--color-ligthturquoise);
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+}
