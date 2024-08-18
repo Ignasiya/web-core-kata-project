@@ -30,12 +30,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-h1 {
-  @include fluid-text(28, 24);
-}
-
-h2,
-h3 {
-  @include fluid-text(20, 16);
-}

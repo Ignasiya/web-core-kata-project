@@ -1,9 +1,9 @@
 .section {
   &__navbar {
-    padding-block: 16px;
+    padding-top: 16px;
 
     @include tablet {
-      padding-block: 24px;
+      padding-top: 24px;
     }
   }
 }

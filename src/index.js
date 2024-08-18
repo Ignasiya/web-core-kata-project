@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import './style/main.scss'
 
 const elBtnOpenSidebar = document.querySelector('#openSidebar')
@@ -69,3 +72,35 @@ elsNavigateShowToggle?.forEach(el => {
     }
   })
 })
+
+let swiperInstances = []
+
+function initSwiper() {
+  const swiperElements = document.querySelectorAll('.swiper')
+
+  if (window.innerWidth < 768) {
+    swiperElements.forEach((swiperEl, index) => {
+      if (!swiperInstances[index]) {
+        swiperInstances[index] = new Swiper(swiperEl, {
+          spaceBetween: 24,
+          width: 272,
+          height: 280,
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true
+          }
+        })
+      }
+    })
+  } else {
+    swiperInstances.forEach((swiper, index) => {
+      if (swiper) {
+        swiper.destroy(true, true)
+        swiperInstances[index] = null
+      }
+    })
+  }
+}
+
+window.addEventListener('resize', initSwiper)
+initSwiper()
