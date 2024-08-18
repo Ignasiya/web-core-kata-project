@@ -6,4 +6,24 @@
       padding-top: 24px;
     }
   }
+
+  &__tablebar {
+    padding-top: 16px;
+
+    @include tablet {
+      padding-top: 24px;
+    }
+  }
+
+  &__prices {
+    margin-top: 16px;
+
+    @include tablet {
+      margin-top: 24px;
+    }
+
+    @include desktop {
+      margin-top: 32px;
+    }
+  }
 }

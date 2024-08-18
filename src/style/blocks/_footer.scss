@@ -25,24 +25,27 @@
 
   &__copyright {
     max-width: 240px;
-    flex: 1 0 30%;
 
     @include tablet {
       text-align: left;
+      flex: 1 0 30%;
     }
   }
 
   &__politic {
     max-width: 220px;
-    flex: 1 0 30%;
+
+    @include tablet {
+      flex: 1 0 30%;
+    }
   }
 
   &__oferta {
     max-width: 330px;
-    flex: 1 0 30%;
 
     @include tablet {
       text-align: right;
+      flex: 1 0 30%;
     }
   }
 }

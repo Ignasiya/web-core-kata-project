@@ -81,10 +81,14 @@ function initSwiper() {
   if (window.innerWidth < 768) {
     swiperElements.forEach((swiperEl, index) => {
       if (!swiperInstances[index]) {
+        let widthEl = 272
+        if (swiperEl.classList.contains('tablebar')) {
+          widthEl = 292
+        }
+
         swiperInstances[index] = new Swiper(swiperEl, {
-          spaceBetween: 24,
-          width: 272,
-          height: 280,
+          spaceBetween: 16,
+          width: widthEl,
           pagination: {
             el: '.swiper-pagination',
             dynamicBullets: true
