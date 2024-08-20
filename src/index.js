@@ -1,7 +1,5 @@
-import Swiper from 'swiper/bundle'
-import 'swiper/css'
-import 'swiper/css/pagination'
 import './style/main.scss'
+import { SliderGallery } from './scripts/swiper'
 
 const elBtnOpenSidebar = document.querySelector('#openSidebar')
 const elBtnCloseSidebar = document.querySelector('#closeSidebar')
@@ -18,6 +16,8 @@ const elCall = document.querySelector('#callModal')
 const elShadingBackground = document.querySelector('#shadingBackground')
 
 const elsNavigateShowToggle = document.querySelectorAll('.navbar__show-toggle')
+
+const swiperElements = document.querySelectorAll('.swiper')
 
 elBtnOpenSidebar?.addEventListener('click', () => {
   elSidebar.classList.toggle('sidebar--show')
@@ -75,36 +75,24 @@ elsNavigateShowToggle?.forEach(el => {
 
 let swiperInstances = []
 
-function initSwiper() {
-  const swiperElements = document.querySelectorAll('.swiper')
+swiperElements.forEach((swiperEl, index) => {
+  if (!swiperInstances[index]) {
+    let widthEl = 272
+    if (swiperEl.classList.contains('tablebar')) {
+      widthEl = 292
+    }
 
-  if (window.innerWidth < 768) {
-    swiperElements.forEach((swiperEl, index) => {
-      if (!swiperInstances[index]) {
-        let widthEl = 272
-        if (swiperEl.classList.contains('tablebar')) {
-          widthEl = 292
+    swiperInstances[index] = new SliderGallery({
+      el: swiperEl,
+      breakpoint: 'md',
+      sliderOptions: {
+        spaceBetween: 24,
+        width: widthEl,
+        pagination: {
+          el: '.swiper-pagination',
+          dynamicBullets: true
         }
-
-        swiperInstances[index] = new Swiper(swiperEl, {
-          spaceBetween: 16,
-          width: widthEl,
-          pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true
-          }
-        })
-      }
-    })
-  } else {
-    swiperInstances.forEach((swiper, index) => {
-      if (swiper) {
-        swiper.destroy(true, true)
-        swiperInstances[index] = null
       }
     })
   }
-}
-
-window.addEventListener('resize', initSwiper)
-initSwiper()
+})
