@@ -1,4 +1,6 @@
 .tablebar {
+  @include reset-list;
+
   display: flex;
   flex-direction: column;
   height: 260px;
@@ -23,6 +25,8 @@
   }
 
   &__rows {
+    @include reset-list;
+
     display: flex;
 
     @include tablet {

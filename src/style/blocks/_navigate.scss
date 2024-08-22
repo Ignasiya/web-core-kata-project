@@ -1,5 +1,7 @@
 .navigate {
   &__list {
+    @include reset-list;
+
     display: flex;
     flex-direction: column;
     row-gap: 16px;
@@ -10,6 +12,8 @@
   }
 
   &__link {
+    @include reset-link;
+
     display: block;
     height: 32px;
     line-height: 32px;
@@ -19,7 +23,7 @@
     letter-spacing: -0.2px;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       height: 32px;

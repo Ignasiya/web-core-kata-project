@@ -10,6 +10,8 @@
   }
 
   &__list {
+    @include reset-list;
+
     @include tablet {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
@@ -32,6 +34,8 @@
   }
 
   &__link {
+    @include reset-link;
+
     display: flex;
     align-items: center;
     min-height: 72px;

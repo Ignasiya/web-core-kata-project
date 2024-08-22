@@ -1,11 +1,13 @@
 .menu {
+  @include reset-list;
+
   display: flex;
   gap: 16px;
   align-items: center;
 
   @include desktop-exclude {
     &--isborder:before {
-      content: "";
+      content: '';
       width: 2px;
       height: 32px;
       background-color: var(--color-border);
@@ -23,7 +25,7 @@
 
   @include tablet {
     &--isborder-tablet:after {
-      content: "";
+      content: '';
       width: 2px;
       height: 32px;
       background-color: var(--color-border);

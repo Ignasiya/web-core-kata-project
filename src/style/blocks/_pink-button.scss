@@ -1,5 +1,6 @@
 .pink-button {
   @include flex-centered;
+  @include reset-link;
 
   height: 32px;
   padding-left: 16px;
