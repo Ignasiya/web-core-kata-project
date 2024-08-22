@@ -20,22 +20,6 @@ export class SliderGallery {
     }
   }
 
-  get _breakpoints() {
-    return this._breakpoints
-  }
-
-  set _breakpoints(val) {
-    return (this._breakpoints = val)
-  }
-
-  get _options() {
-    return this.options
-  }
-
-  set _options(val) {
-    return (this._options = val)
-  }
-
   handleResizeWindow(event) {
     const { innerWidth = 0 } = event?.target || event
 
