@@ -12,7 +12,7 @@
     <title>CPS Услуги и севрисы</title>
   </head>
   <body>
-    <main class="content">
+    <div class="content">
       <aside class="sidebar sidebar--is-fixed" id="sidebarOverlay">
         <header class="sidebar__header container">
           <button class="hidden-desktop circle-button circle-button--icon-cross" id="closeSidebar">
@@ -101,15 +101,16 @@
 
       <div id="shadingBackground" class="shading-background"></div>
 
-      <div class="content__page">
+      <main class="content__page">
         <header class="header container">
           <div class="header__menu hidden-desktop">
             <div class="menu">
-              <div class="menu menu--isborder-tablet">
-                <button class="circle-button circle-button--icon-burger" id="openSidebar">
-                  <span class="visually-hidden">Меню</span>
-                </button>
-              </div>
+              <button
+                class="circle-button circle-button--icon-burger menu--isborder-tablet"
+                id="openSidebar"
+              >
+                <span class="visually-hidden">Меню</span>
+              </button>
               <a class="menu__logo logo" href="https://ignasiya.github.io/first_part_project/">
                 <img
                   src="images/logo.svg"
@@ -562,7 +563,7 @@
             Информация, размещенная на данной странице, не является публичной офертой
           </div>
         </footer>
-      </div>
+      </main>
 
       <dialog class="modal" id="feedbackModal">
         <button
@@ -644,6 +645,6 @@
           </form>
         </div>
       </dialog>
-    </main>
+    </div>
   </body>
 </html>

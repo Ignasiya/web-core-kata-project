@@ -24,12 +24,18 @@
   }
 
   @include tablet {
-    &--isborder-tablet:after {
-      content: '';
-      width: 2px;
-      height: 32px;
-      background-color: var(--color-border);
-      margin-inline: 4px;
+    &--isborder-tablet {
+      margin-right: 24px;
+
+      &:after {
+        content: '';
+        position: relative;
+        right: -42px;
+        width: 2px;
+        height: 32px;
+        background-color: var(--color-border);
+        margin-inline: 4px;
+      }
     }
   }
 
