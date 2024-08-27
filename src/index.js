@@ -1,5 +1,5 @@
-import './style/main.scss'
 import { SliderGallery } from './scripts/swiper'
+import './style/main.scss'
 
 const elBtnOpenSidebar = document.querySelector('#openSidebar')
 const elBtnCloseSidebar = document.querySelector('#closeSidebar')
